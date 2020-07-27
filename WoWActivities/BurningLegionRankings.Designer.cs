@@ -55,10 +55,16 @@
             // 
             // rankingsDataView
             // 
+            this.rankingsDataView.AllowUserToAddRows = false;
+            this.rankingsDataView.AllowUserToDeleteRows = false;
+            this.rankingsDataView.AllowUserToResizeColumns = false;
+            this.rankingsDataView.AllowUserToResizeRows = false;
             this.rankingsDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.rankingsDataView.Location = new System.Drawing.Point(1119, 344);
+            this.rankingsDataView.Location = new System.Drawing.Point(1044, 344);
             this.rankingsDataView.Name = "rankingsDataView";
-            this.rankingsDataView.Size = new System.Drawing.Size(268, 260);
+            this.rankingsDataView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.rankingsDataView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.rankingsDataView.Size = new System.Drawing.Size(350, 260);
             this.rankingsDataView.TabIndex = 1;
             // 
             // WarIconButton
