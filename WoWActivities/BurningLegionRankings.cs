@@ -32,6 +32,43 @@ namespace WoWActivities
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("Score", typeof(string));
             rankingsDataView.DataSource = table;
+            rankingsDataView.RowHeadersVisible = false;
+            rankingsDataView.ColumnHeadersVisible = false;
+            rankingsDataView.BackgroundColor = Color.LightCoral;
+            rankingsDataView.DefaultCellStyle.Font = new Font("Arial", 15F, GraphicsUnit.Pixel);
+            rankingsDataView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            rankingsDataView.MouseWheel += new MouseEventHandler(mousewheel);
+
+        }
+        private void ColorTable()
+        {
+            for (int i = 0; i < rankingsDataView.Rows.Count; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    rankingsDataView[0, i].Style.BackColor = Color.Moccasin;
+                    rankingsDataView[1, i].Style.BackColor = Color.Moccasin;
+                    rankingsDataView[2, i].Style.BackColor = Color.Moccasin;
+                }
+                else
+                {
+                    rankingsDataView[0, i].Style.BackColor = Color.LightCoral;
+                    rankingsDataView[1, i].Style.BackColor = Color.LightCoral;
+                    rankingsDataView[2, i].Style.BackColor = Color.LightCoral;
+                }
+
+            }
+        }
+        private void mousewheel(object sender, MouseEventArgs e)
+        {
+            if (e.Delta > 0 && rankingsDataView.FirstDisplayedScrollingRowIndex > 0)
+            {
+                rankingsDataView.FirstDisplayedScrollingRowIndex--;
+            }
+            else if (e.Delta < 0 && rankingsDataView.Rows.Count>1 && rankingsDataView.FirstDisplayedScrollingRowIndex !=8)
+            {
+                rankingsDataView.FirstDisplayedScrollingRowIndex++;
+            }
         }
         private async Task<List<PlayerNameScore>> ClassRankingsFromRaiderIO(string chosenclass)
         {
@@ -44,7 +81,7 @@ namespace WoWActivities
         }
         private void BurningLegionRankings_Load(object sender, EventArgs e)
         {
-            InitTable();
+            //InitTable();
         }
         private async void DHiconbutton_Click(object sender, EventArgs e)
         {
@@ -55,7 +92,9 @@ namespace WoWActivities
             {
                 table.Rows.Add(counter.ToString(), player.Name, player.Score);
                 counter++;
+                
             }
+            ColorTable();
         }
         private async void WarIconButton_Click(object sender, EventArgs e)
         {
@@ -80,5 +119,6 @@ namespace WoWActivities
                 counter++;
             }
         }
+
     }
 }

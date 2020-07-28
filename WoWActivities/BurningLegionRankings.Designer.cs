@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BurningLegionRankings));
             this.DHiconbutton = new System.Windows.Forms.Button();
-            this.rankingsDataView = new System.Windows.Forms.DataGridView();
             this.WarIconButton = new System.Windows.Forms.Button();
             this.HavocIconButton = new System.Windows.Forms.Button();
+            this.rankingsDataView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.rankingsDataView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,6 +42,7 @@
             this.DHiconbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DHiconbutton.BackgroundImage")));
             this.DHiconbutton.CausesValidation = false;
             this.DHiconbutton.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.DHiconbutton.FlatAppearance.BorderSize = 0;
             this.DHiconbutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DHiconbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DHiconbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -53,30 +54,17 @@
             this.DHiconbutton.UseVisualStyleBackColor = false;
             this.DHiconbutton.Click += new System.EventHandler(this.DHiconbutton_Click);
             // 
-            // rankingsDataView
-            // 
-            this.rankingsDataView.AllowUserToAddRows = false;
-            this.rankingsDataView.AllowUserToDeleteRows = false;
-            this.rankingsDataView.AllowUserToResizeColumns = false;
-            this.rankingsDataView.AllowUserToResizeRows = false;
-            this.rankingsDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.rankingsDataView.Location = new System.Drawing.Point(1044, 344);
-            this.rankingsDataView.Name = "rankingsDataView";
-            this.rankingsDataView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.rankingsDataView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.rankingsDataView.Size = new System.Drawing.Size(350, 260);
-            this.rankingsDataView.TabIndex = 1;
-            // 
             // WarIconButton
             // 
             this.WarIconButton.BackColor = System.Drawing.Color.Transparent;
             this.WarIconButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WarIconButton.BackgroundImage")));
             this.WarIconButton.CausesValidation = false;
             this.WarIconButton.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.WarIconButton.FlatAppearance.BorderSize = 0;
             this.WarIconButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.WarIconButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.WarIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WarIconButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.WarIconButton.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.WarIconButton.Location = new System.Drawing.Point(207, 12);
             this.WarIconButton.Name = "WarIconButton";
             this.WarIconButton.Size = new System.Drawing.Size(170, 170);
@@ -90,6 +78,7 @@
             this.HavocIconButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HavocIconButton.BackgroundImage")));
             this.HavocIconButton.CausesValidation = false;
             this.HavocIconButton.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.HavocIconButton.FlatAppearance.BorderSize = 0;
             this.HavocIconButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.HavocIconButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.HavocIconButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -101,15 +90,26 @@
             this.HavocIconButton.UseVisualStyleBackColor = false;
             this.HavocIconButton.Click += new System.EventHandler(this.HavocIconButton_Click);
             // 
+            // rankingsDataView
+            // 
+            this.rankingsDataView.BackgroundColor = System.Drawing.Color.AntiqueWhite;
+            this.rankingsDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rankingsDataView.Location = new System.Drawing.Point(953, 364);
+            this.rankingsDataView.Name = "rankingsDataView";
+            this.rankingsDataView.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.rankingsDataView.Size = new System.Drawing.Size(300, 314);
+            this.rankingsDataView.TabIndex = 5;
+            // 
             // BurningLegionRankings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tomato;
-            this.ClientSize = new System.Drawing.Size(1399, 616);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1280, 690);
+            this.Controls.Add(this.rankingsDataView);
             this.Controls.Add(this.HavocIconButton);
             this.Controls.Add(this.WarIconButton);
-            this.Controls.Add(this.rankingsDataView);
             this.Controls.Add(this.DHiconbutton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "BurningLegionRankings";
@@ -123,8 +123,8 @@
         #endregion
 
         private System.Windows.Forms.Button DHiconbutton;
-        private System.Windows.Forms.DataGridView rankingsDataView;
         private System.Windows.Forms.Button WarIconButton;
         private System.Windows.Forms.Button HavocIconButton;
+        private System.Windows.Forms.DataGridView rankingsDataView;
     }
 }

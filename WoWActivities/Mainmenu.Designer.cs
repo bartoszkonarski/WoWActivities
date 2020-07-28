@@ -35,9 +35,9 @@
             // BLRankings
             // 
             this.BLRankings.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BLRankings.Location = new System.Drawing.Point(37, 22);
+            this.BLRankings.Location = new System.Drawing.Point(12, 12);
             this.BLRankings.Name = "BLRankings";
-            this.BLRankings.Size = new System.Drawing.Size(298, 183);
+            this.BLRankings.Size = new System.Drawing.Size(233, 116);
             this.BLRankings.TabIndex = 0;
             this.BLRankings.Text = "Burning Legion Class Rankings";
             this.BLRankings.UseVisualStyleBackColor = true;
@@ -48,7 +48,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1399, 616);
+            this.ClientSize = new System.Drawing.Size(1280, 690);
             this.Controls.Add(this.BLRankings);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Mainmenu";
