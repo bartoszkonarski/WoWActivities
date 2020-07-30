@@ -29,19 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainmenu));
-            this.BLRankings = new System.Windows.Forms.Button();
+            this.RaiderIOButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // BLRankings
+            // RaiderIOButton
             // 
-            this.BLRankings.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BLRankings.Location = new System.Drawing.Point(12, 12);
-            this.BLRankings.Name = "BLRankings";
-            this.BLRankings.Size = new System.Drawing.Size(233, 116);
-            this.BLRankings.TabIndex = 0;
-            this.BLRankings.Text = "Burning Legion Class Rankings";
-            this.BLRankings.UseVisualStyleBackColor = true;
-            this.BLRankings.Click += new System.EventHandler(this.button1_Click);
+            this.RaiderIOButton.BackColor = System.Drawing.Color.Transparent;
+            this.RaiderIOButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RaiderIOButton.BackgroundImage")));
+            this.RaiderIOButton.CausesValidation = false;
+            this.RaiderIOButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RaiderIOButton.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.RaiderIOButton.FlatAppearance.BorderSize = 0;
+            this.RaiderIOButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.RaiderIOButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.RaiderIOButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RaiderIOButton.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.RaiderIOButton.Location = new System.Drawing.Point(12, 461);
+            this.RaiderIOButton.Name = "RaiderIOButton";
+            this.RaiderIOButton.Size = new System.Drawing.Size(100, 100);
+            this.RaiderIOButton.TabIndex = 3;
+            this.RaiderIOButton.UseVisualStyleBackColor = false;
+            this.RaiderIOButton.Click += new System.EventHandler(this.RaiderIOButton_Click);
             // 
             // Mainmenu
             // 
@@ -49,17 +57,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1280, 690);
-            this.Controls.Add(this.BLRankings);
+            this.Controls.Add(this.RaiderIOButton);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1296, 729);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1296, 729);
             this.Name = "Mainmenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mainmenu_MouseDown);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BLRankings;
+        private System.Windows.Forms.Button RaiderIOButton;
     }
 }
 
